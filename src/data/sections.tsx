@@ -84,7 +84,7 @@ useVariableStore.getState().initialize(getDefaultValues());
 export const sections: ReactElement[] = [
     <FullWidthLayout key="math-in-nature" maxWidth="xl">
         <Section id="math-in-nature">
-            <Heading level={1}>Mathematics in Nature</Heading>
+            <Heading level={1}>Mathematics in  </Heading>
 
             <InteractiveParagraph>
                 Mathematics is the language of the universe. From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating 

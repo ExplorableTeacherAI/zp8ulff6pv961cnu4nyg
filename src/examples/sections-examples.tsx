@@ -828,7 +828,7 @@ export const exampleFlowDiagramCustom = (
             <Heading level={2}>Concept Map Example</Heading>
             <Paragraph>
                 FlowDiagram can be used for various visualizations like concept maps,
-                decision trees, and process flows.
+                decision , and process flows.
             </Paragraph>
             <Spacer height={16} />
 
