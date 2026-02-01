@@ -2,6 +2,7 @@ import { type ReactElement } from "react";
 import { Section } from "@/components/templates";
 import { FullWidthLayout } from "@/components/layouts";
 import { Heading, InteractiveParagraph } from "@/components/molecules";
+import { InlineStepper, InlineDropdown, InlineTextInput } from "@/components/atoms";
 
 // Initialize variables from this file's variable definitions
 import { useVariableStore } from "@/stores";
@@ -90,16 +91,67 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                
-
+                Have you ever wondered why honeybees build hexagonal cells? Hexagons have{" "}
+                <InlineStepper
+                    initialValue={6}
+                    min={3}
+                    max={12}
+                    color="#D81B60"
+                    bgColor="rgba(216, 27, 96, 0.9)"
+                />{" "}
+                sides, making it the most efficient shape for storing honey — they use the{" "}
+                <InlineDropdown
+                    correctAnswer="least"
+                    options={["most", "least", "average"]}
+                    color="#3B82F6"
+                    bgColor="rgba(59, 130, 246, 0.35)"
+                />{" "}
+                amount of wax while maximizing space. Nature{" "}
+                <InlineDropdown
+                    correctAnswer="discovered"
+                    options={["ignored", "discovered", "rejected"]}
+                    color="#16A34A"
+                    bgColor="rgba(22, 163, 74, 0.35)"
+                />{" "}
+                this optimization millions of years before humans!
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with 1 and 1, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8.
+                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with{" "}
+                <InlineStepper
+                    initialValue={1}
+                    min={0}
+                    max={5}
+                    color="#7C3AED"
+                    bgColor="rgba(124, 58, 237, 0.9)"
+                />{" "}
+                and{" "}
+                <InlineStepper
+                    initialValue={1}
+                    min={0}
+                    max={5}
+                    color="#7C3AED"
+                    bgColor="rgba(124, 58, 237, 0.9)"
+                />, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8.
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of 1 unit, its circumference is π ≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
+                Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of{" "}
+                <InlineStepper
+                    initialValue={1}
+                    min={1}
+                    max={10}
+                    color="#EA580C"
+                    bgColor="rgba(234, 88, 12, 0.9)"
+                />{" "}
+                unit, its circumference is π ≈{" "}
+                <InlineTextInput
+                    correctAnswer="3.14159"
+                    placeholder="???"
+                    color="#2563EB"
+                    bgColor="rgba(37, 99, 235, 0.35)"
+                />{" "}
+                units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
             </InteractiveParagraph>
         </Section>
     </FullWidthLayout>
