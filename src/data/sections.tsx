@@ -87,11 +87,11 @@ export const sections: ReactElement[] = [
             <Heading level={1}>Mathematics  </Heading>
 
             <InteractiveParagraph>
-                Mathematics is the language of the universe. From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating 
+                From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating 
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                Have you ever wondered why honeybees build hexagonal cells?  have{" "}
+                Have you ever wondered why  build hexagonal cells?  have{" "}
                 <InlineStepper
                     initialValue={6}
                     min={3}
