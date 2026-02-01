@@ -99,7 +99,7 @@ export const sections: ReactElement[] = [
                     color="#D81B60"
                     bgColor="rgba(216, 27, 96, 0.9)"
                 />{" "}
-                sides, making it the most efficient shape for storing honey — they use the{" "}
+                sides, making it the most efficient shape for storing honey  the{" "}
                 <InlineDropdown
                     correctAnswer="least"
                     options={["most", "least", "average"]}
