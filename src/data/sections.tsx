@@ -87,7 +87,7 @@ export const sections: ReactElement[] = [
             <Heading level={1}>Mathematics in Nature</Heading>
 
             <InteractiveParagraph>
-                Mathematics is the language of the universe. From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating connections together!
+                Mathematics is the language of the universe. From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating 
             </InteractiveParagraph>
 
             <InteractiveParagraph>
