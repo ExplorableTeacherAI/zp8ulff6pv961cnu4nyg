@@ -163,7 +163,7 @@ const exampleSections: ReactElement[] = [
             <div className="mb-4">
                 <h2 className="text-3xl font-bold mb-2">Split Layout Example</h2>
                 <p className="text-muted-foreground">
-                    Perfect for pairing explanations with visualizations. Content on the left, interactive demo on the right.
+                    Perfect for pairing explanations   visualizations. Content on the left, interactive demo on the right.
                 </p>
             </div>
         </Section>
