@@ -106,7 +106,7 @@ export const sections: ReactElement[] = [
                     color="#3B82F6"
                     bgColor="rgba(59, 130, 246, 0.35)"
                 />{" "}
-                amount of wax while maximizing space. Nature{" "}
+                amount of wax while maximizing space.  {" "}
                 <InlineDropdown
                     correctAnswer="discovered"
                     options={["ignored", "discovered", "rejected"]}
