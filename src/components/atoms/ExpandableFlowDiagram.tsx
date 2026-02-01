@@ -206,7 +206,7 @@ const calculateNodePositions = (
         let totalChildrenWidth = 0;
         const childResults: Array<{ nodes: Array<TreeNode & { position: { x: number; y: number } }>; width: number }> = [];
 
-        // First pass: calculate widths of all subtrees
+        // First pass: calculate widths of all sub
         for (const child of node.children) {
             const childResult = calculateNodePositions(
                 child,
