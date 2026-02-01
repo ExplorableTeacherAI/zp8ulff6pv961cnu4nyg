@@ -1,5 +1,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import DOMPurify from "dompurify";
+import { EditableText } from "@/components/editing";
 
 export interface HeadingProps {
     children: ReactNode;
@@ -47,43 +48,57 @@ export const Heading = ({
 
     const classes = `${levelStyles[level]} ${enableMath ? "mathjax-process" : ""} ${className}`.trim();
 
+    const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements;
+
     // If children is a string, sanitize it
     if (typeof children === "string") {
         const sanitized = DOMPurify.sanitize(children, { USE_PROFILES: { html: true } });
 
-        switch (level) {
-            case 1:
-                return <h1 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            case 2:
-                return <h2 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            case 3:
-                return <h3 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            case 4:
-                return <h4 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            case 5:
-                return <h5 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            case 6:
-                return <h6 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-            default:
-                return <h1 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
-        }
+        return (
+            <EditableText as={HeadingTag}>
+                {(() => {
+                    switch (level) {
+                        case 1:
+                            return <h1 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        case 2:
+                            return <h2 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        case 3:
+                            return <h3 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        case 4:
+                            return <h4 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        case 5:
+                            return <h5 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        case 6:
+                            return <h6 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                        default:
+                            return <h1 ref={contentRef as any} className={classes} dangerouslySetInnerHTML={{ __html: sanitized }} />;
+                    }
+                })()}
+            </EditableText>
+        );
     }
 
     // For React nodes
-    switch (level) {
-        case 1:
-            return <h1 ref={contentRef as any} className={classes}>{children}</h1>;
-        case 2:
-            return <h2 ref={contentRef as any} className={classes}>{children}</h2>;
-        case 3:
-            return <h3 ref={contentRef as any} className={classes}>{children}</h3>;
-        case 4:
-            return <h4 ref={contentRef as any} className={classes}>{children}</h4>;
-        case 5:
-            return <h5 ref={contentRef as any} className={classes}>{children}</h5>;
-        case 6:
-            return <h6 ref={contentRef as any} className={classes}>{children}</h6>;
-        default:
-            return <h1 ref={contentRef as any} className={classes}>{children}</h1>;
-    }
+    return (
+        <EditableText as={HeadingTag}>
+            {(() => {
+                switch (level) {
+                    case 1:
+                        return <h1 ref={contentRef as any} className={classes}>{children}</h1>;
+                    case 2:
+                        return <h2 ref={contentRef as any} className={classes}>{children}</h2>;
+                    case 3:
+                        return <h3 ref={contentRef as any} className={classes}>{children}</h3>;
+                    case 4:
+                        return <h4 ref={contentRef as any} className={classes}>{children}</h4>;
+                    case 5:
+                        return <h5 ref={contentRef as any} className={classes}>{children}</h5>;
+                    case 6:
+                        return <h6 ref={contentRef as any} className={classes}>{children}</h6>;
+                    default:
+                        return <h1 ref={contentRef as any} className={classes}>{children}</h1>;
+                }
+            })()}
+        </EditableText>
+    );
 };

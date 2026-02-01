@@ -1,4 +1,5 @@
 import { useEffect, useRef, type ReactNode } from "react";
+import { EditableText } from "@/components/editing";
 
 export interface InteractiveParagraphProps {
     /** The text content with optional interactive elements as children */
@@ -48,11 +49,13 @@ export const InteractiveParagraph = ({
     }, [children, enableMath]);
 
     return (
-        <p
-            ref={contentRef}
-            className={`text-base leading-relaxed ${enableMath ? "mathjax-process" : ""} ${className}`}
-        >
-            {children}
-        </p>
+        <EditableText as="p">
+            <p
+                ref={contentRef}
+                className={`text-base leading-relaxed ${enableMath ? "mathjax-process" : ""} ${className}`}
+            >
+                {children}
+            </p>
+        </EditableText>
     );
 };
