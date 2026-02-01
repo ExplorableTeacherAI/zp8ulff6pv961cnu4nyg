@@ -117,7 +117,7 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with{" "}
+                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you  with{" "}
                 <InlineStepper
                     initialValue={1}
                     min={0}
