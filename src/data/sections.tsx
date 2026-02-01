@@ -91,7 +91,7 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                Have you ever wondered why honeybees build hexagonal cells? Hexagons have{" "}
+                Have you ever wondered why honeybees build hexagonal cells?  have{" "}
                 <InlineStepper
                     initialValue={6}
                     min={3}
@@ -132,7 +132,7 @@ export const sections: ReactElement[] = [
                     max={5}
                     color="#7C3AED"
                     bgColor="rgba(124, 58, 237, 0.9)"
-                />, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8.
+                />, each number is the sum of two before it: 1, 1, 2, 3, 5, 8.
             </InteractiveParagraph>
 
             <InteractiveParagraph>
