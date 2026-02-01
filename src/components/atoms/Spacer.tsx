@@ -1,7 +1,7 @@
 
 
 export interface SpacerProps {
-    /** Height in pixels or CSS units */
+    /** Height in pixels or CSS  */
     height?: number | string;
     className?: string;
 }
