@@ -151,7 +151,7 @@ export const sections: ReactElement[] = [
                     color="#2563EB"
                     bgColor="rgba(37, 99, 235, 0.35)"
                 />{" "}
-                units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
+                units.  
             </InteractiveParagraph>
         </Section>
     </FullWidthLayout>
