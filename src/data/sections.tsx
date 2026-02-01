@@ -136,7 +136,7 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                Pi (π) is perhaps the most famous number in mathematics. This non-repeating  connects a circle's circumference to its diameter. If a circle has a diameter of{" "}
+                Pi (π) is perhaps the most famous number in mathematics. This non-repeating   a circle's circumference to its diameter. If a circle has a diameter of{" "}
                 <InlineStepper
                     initialValue={1}
                     min={1}
