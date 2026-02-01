@@ -90,7 +90,8 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph>
-                Have you ever wondered why honeybees build hexagonal cells? Hexagons have 6 sides, making it the most efficient shape for storing honey — they use the least amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!
+                
+
             </InteractiveParagraph>
 
             <InteractiveParagraph>
